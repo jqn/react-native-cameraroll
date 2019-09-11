@@ -367,12 +367,6 @@ RCT_EXPORT_METHOD(deletePhotos:(NSArray<NSString *>*)assets
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 {
-  // NSArray<NSURL *> *assets_ = [RCTConvert NSURLArray:assets];
-  // [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-  //   PHFetchResult<PHAsset *> *fetched =
-  //   [PHAsset fetchAssetsWithALAssetURLs:assets_ options:nil];
-  //   [PHAssetChangeRequest deleteAssets:fetched];
-  // }
   NSMutableArray *convertedAssets = [NSMutableArray array];
   
   for (NSString *asset in assets) {
